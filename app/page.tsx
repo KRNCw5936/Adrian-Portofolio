@@ -26,7 +26,6 @@ export default function HomePage() {
 
   return (
     <>
-      
       {/* Animasi Background */}
       <div className="bg-animation">
         {Array.from({ length: 8 }).map((_, i) => (
@@ -97,7 +96,7 @@ export default function HomePage() {
         
                 {/* Nama lengkap bahasa/framework dan bold */}
                 <span className="skill-name" style={{ fontWeight: 'bold' }}>
-                  {skillMapping[icon]}
+                  {skillMapping[icon as keyof typeof skillMapping]}
                 </span>
               </div>
             ))}
